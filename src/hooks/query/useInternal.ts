@@ -4,8 +4,8 @@
  * These hooks simplify the process of fetching data from server.
  */
 
-import { bookingApi } from '@/services';
 import { useQuery } from 'react-query';
+import { bookingApi } from '@/services';
 
 export const useGetBookings = () => {
   return useQuery(['get-bookings'], () => bookingApi.getBookingList());

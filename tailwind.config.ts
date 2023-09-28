@@ -11,7 +11,19 @@ module.exports = {
       },
     },
     extend: {
+      screen: {
+        xs: '285px',
+      },
+      fontFamily: {
+        rye: ['var(--font-rye)'],
+        montserrat: ['var(--font-montserrat)'],
+      },
       colors: {
+        '#1D1D1D': '#1D1D1D',
+        '#20201E': '#20201E',
+        '#DDB361': '#DDB361',
+        '#D8A94C': '#D8A94C',
+        '#C6922B': '#C6922B',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

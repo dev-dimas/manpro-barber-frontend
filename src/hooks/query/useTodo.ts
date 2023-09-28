@@ -4,8 +4,8 @@
  * These hooks simplify the process of mutate data from server.
  */
 
-import { bookingApi } from '@/services';
 import { useMutation } from 'react-query';
+import { bookingApi } from '@/services';
 
 // TODO: Give parameter json with proper type
 export const useCreateBooking = () => {

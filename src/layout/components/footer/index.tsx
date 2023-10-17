@@ -1,37 +1,33 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { montserrat, rye } from '@/libs/font';
+import { montserrat } from '@/libs/font';
 import { cn } from '@/libs/utils';
 import FooterImage from './footer-image';
 
 const Footer = () => {
   return (
-    <footer className={cn(rye.variable, montserrat.variable, 'font-montserrat bg-black')}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="bg-#20201E">
-        <path d="M0 0L720 73.9556L1440 0V512H0V0Z" fill="black" />
+    <footer className={cn(montserrat.variable, 'font-montserrat bg-#02221D mt-20')}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="bg-#05312A">
+        <path d="M0 0L720 73.9556L1440 0V512H0V0Z" fill="#02221D" />
       </svg>
       <div className="flex flex-col items-center justify-center mt-[-90px]">
         <div className="w-2/3 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
-            <Image src="/images/logo-barberque.png" alt="Logo Barberque" width={120} height={120} />
-            <div className="text-white flex flex-col items-center">
-              <span className="font-rye text-2xl uppercase">Barberque</span>
-              <span className="text-[5px] font-semibold text-#C6922B leading-[6px]">Top Quality in Men&apos;s Grooming</span>
-            </div>
+            <Image src="/images/logo-barberque.png" alt="Logo Barberque" width={200} height={114} />
           </div>
           <FooterImage />
-          <div className="flex gap-4 text-#C6922B text-sm pb-16">
-            <Button className="rounded-none w-[147px] bg-transparent border-#C6922B hover:bg-#C6922B" variant="outline" asChild>
+          <div className="flex gap-4 text-#FFF000 text-sm pb-16">
+            <Button className="rounded-none w-[147px] bg-transparent border-#FFF000 hover:bg-#FFF000" variant="outline" asChild>
               <a href="#">Instagram</a>
             </Button>
-            <Button className="rounded-none w-[147px] bg-transparent border-#C6922B hover:bg-#C6922B" variant="outline" asChild>
+            <Button className="rounded-none w-[147px] bg-transparent border-#FFF000 hover:bg-#FFF000" variant="outline" asChild>
               <a href="#">Facebook</a>
             </Button>
-            <Button className="rounded-none w-[147px] bg-transparent border-#C6922B hover:bg-#C6922B" variant="outline" asChild>
+            <Button className="rounded-none w-[147px] bg-transparent border-#FFF000 hover:bg-#FFF000" variant="outline" asChild>
               <a href="#">Twitter</a>
             </Button>
-            <Button className="rounded-none w-[147px] bg-transparent border-#C6922B hover:bg-#C6922B" variant="outline" asChild>
+            <Button className="rounded-none w-[147px] bg-transparent border-#FFF000 hover:bg-#FFF000" variant="outline" asChild>
               <a href="#">Tiktok</a>
             </Button>
           </div>

@@ -10,7 +10,7 @@ export const navbarLink: TNavbarLink[] = [
   },
   {
     name: 'Tentang Kami',
-    href: '/tentang-kami',
+    href: '/about-us',
   },
   {
     name: 'Layanan',

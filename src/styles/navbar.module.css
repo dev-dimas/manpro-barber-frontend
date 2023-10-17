@@ -1,0 +1,36 @@
+.navlink,
+.navlinkActive {
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+
+.navlink::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #fff000;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.navlink:hover::before {
+  width: 100%;
+}
+
+.navlinkActive::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff000;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}

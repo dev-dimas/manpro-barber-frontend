@@ -11,7 +11,25 @@ module.exports = {
       },
     },
     extend: {
+      screen: {
+        xs: '285px',
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        bebas: ['var(--font-bebas)'],
+        anton: ['var(--font-anton)'],
+      },
       colors: {
+        '#1D1D1D': '#1D1D1D',
+        '#20201E': '#20201E',
+        '#DDB361': '#DDB361',
+        '#D8A94C': '#D8A94C',
+        '#C6922B': '#C6922B',
+        '#05312A': '#05312A',
+        '#02221D': '#02221D',
+        '#FFF000': '#FFF000',
+        '#DBD148': '#DBD148',
+        '#ECF4F3': '#ECF4F3',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

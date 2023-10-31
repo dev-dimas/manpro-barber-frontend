@@ -5,12 +5,11 @@ import OurBarber from '@/components/home/our-barber';
 import OurServices from '@/components/home/our-services';
 import OurStory from '@/components/home/our-story';
 import Pricelist from '@/components/home/pricelist';
-import { Separator } from '@/components/ui/separator';
-import Layout from '@/layout';
+import { UserLayout } from '@/layout';
 
 export default function Home() {
   return (
-    <Layout>
+    <UserLayout>
       <Head>
         <title>Barberque</title>
       </Head>
@@ -44,6 +43,6 @@ export default function Home() {
         <Pricelist />
         <div className="bg-#05312A h-[500px]"></div>
       </div>
-    </Layout>
+    </UserLayout>
   );
 }

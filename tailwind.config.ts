@@ -18,6 +18,7 @@ module.exports = {
         montserrat: ['var(--font-montserrat)'],
         bebas: ['var(--font-bebas)'],
         anton: ['var(--font-anton)'],
+        ooohBaby: ['var(--font-ooohBaby)'],
       },
       colors: {
         '#1D1D1D': '#1D1D1D',

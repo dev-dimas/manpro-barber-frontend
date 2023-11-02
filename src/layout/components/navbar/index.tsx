@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <header className={cn(montserrat.variable, 'w-full flex flex-col items-center absolute top-8 gap-4 font-montserrat')}>
-        <nav className="flex w-2/3 justify-between items-center">
+        <nav className="flex w-2/3 justify-between items-center z-[1]">
           {navbarLink.map(
             (link: TNavbarLink, index: number) =>
               index < 3 && (

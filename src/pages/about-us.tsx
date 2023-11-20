@@ -10,9 +10,9 @@ const AboutUs = () => {
       {/* Hero Header */}
       <div className="flex flex-col justify-between items-center w-full h-screen bg-[url('/images/hero-image-3.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute w-full h-full bottom-0 bg-gradient-to-t from-[#05312a]"></div>
-        <div className="flex flex-col flex-1 justify-center items-center z-[1]">
-          <h1 className="uppercase font-anton text-8xl text-#FFF000">Cut Like a Boss</h1>
-          <p className="uppercase font-bold text-2xl text-white">Cutboss Barbershop</p>
+        <div className="flex flex-col flex-1 justify-center items-center relative">
+          <h1 className="uppercase font-anton text-8xl text-#FFF000 z-[1]">Cut Like a Boss</h1>
+          <p className="uppercase font-bold text-2xl text-white z-[1]">Cutboss Barbershop</p>
         </div>
       </div>
 

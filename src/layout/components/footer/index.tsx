@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <Separator className="bg-white" />
         <div className="py-6 text-sm font-medium text-white w-2/3">
-          <p className="text-center">Copyright © 2023 Barberque | Pos & Online Queue</p>
+          <p className="text-center">Copyright © 2023 Barberque by CUTBOSS BARBERSHOP</p>
         </div>
       </div>
     </footer>

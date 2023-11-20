@@ -9,16 +9,16 @@ export const navbarLink: TNavbarLink[] = [
     href: '/',
   },
   {
-    name: 'Tentang Kami',
+    name: 'About Us',
     href: '/about-us',
   },
   {
-    name: 'Layanan',
-    href: '/layanan',
+    name: 'Services',
+    href: '/services',
   },
   {
-    name: 'Lokasi',
-    href: '/lokasi',
+    name: 'Location',
+    href: '/location',
   },
   {
     name: 'Blog',

@@ -13,7 +13,13 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={cn(montserrat.variable, 'w-full flex flex-col items-center absolute top-8 gap-4 font-montserrat')}>
+      <header
+        className={cn(
+          montserrat.variable,
+          'w-full flex flex-col items-center absolute top-8 gap-4 font-montserrat',
+          pathname.startsWith('/blog/') && 'bg-#02221D top-0 static py-8'
+        )}
+      >
         <nav className="flex w-2/3 justify-between items-center z-[1]">
           {navbarLink.map(
             (link: TNavbarLink, index: number) =>
@@ -27,12 +33,14 @@ const Navbar = () => {
           {navbarLink.map(
             (link: TNavbarLink, index: number) =>
               index >= 3 && (
-                <Link key={index} href={link.href} className={pathname === link.href ? styles.navlinkActive : styles.navlink}>
+                <Link key={index} href={link.href} className={pathname.startsWith(link.href) ? styles.navlinkActive : styles.navlink}>
                   {link.name}
                 </Link>
               )
           )}
-          <Button className="uppercase text-black bg-#FFF000 rounded-[5px] hover:bg-#DBD148 px-[38px] py-3 text-sm font-semibold">Booking</Button>
+          <Button className="uppercase text-black bg-#FFF000 rounded-[5px] hover:bg-#DBD148 px-[38px] py-3 text-sm font-semibold" asChild>
+            <Link href={'/login'}>Login</Link>
+          </Button>
         </nav>
       </header>
     </>

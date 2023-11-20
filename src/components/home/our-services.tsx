@@ -1,3 +1,4 @@
+import ServiceCardList from '../services/service-card-list';
 import TitleFrame from './title-frame';
 import VShapeSide from './v-shape-side';
 
@@ -10,12 +11,7 @@ const OurServices = () => {
           <h2 className="uppercase font-anton text-5xl py-2 text-#05312A">Our Services</h2>
         </TitleFrame>
         <div className="w-2/3 flex justify-center items-center pt-28">
-          <div className="flex gap-4 flex-wrap">
-            <div className="w-[229px] h-[307px] bg-[#D9D9D9]"></div>
-            <div className="w-[229px] h-[307px] bg-[#D9D9D9]"></div>
-            <div className="w-[229px] h-[307px] bg-[#D9D9D9]"></div>
-            <div className="w-[229px] h-[307px] bg-[#D9D9D9]"></div>
-          </div>
+          <ServiceCardList withShadow />
         </div>
       </div>
     </>

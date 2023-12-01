@@ -36,7 +36,7 @@ export default function Home() {
         {/* Our Services */}
         <OurServices />
         {/* Booking Now */}
-        <BookingForm />
+        <BookingForm withVShape />
         {/* OurBarber */}
         <OurBarber />
         {/* Pricelist */}

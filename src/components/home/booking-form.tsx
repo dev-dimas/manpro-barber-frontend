@@ -7,10 +7,10 @@ import { serviceList } from './serviceList';
 import TitleFrame from './title-frame';
 import VShapeSide from './v-shape-side';
 
-const BookingForm = () => {
+const BookingForm = ({ withVShape = false }: { withVShape?: boolean }) => {
   return (
     <>
-      <VShapeSide foreground="#05312A" className="bg-#ECF4F3" />
+      {withVShape && <VShapeSide foreground="#05312A" className="bg-#ECF4F3" />}
       <div className="w-full bg-#05312A flex justify-center pt-20 pb-24">
         <div className="w-2/3 rounded-3xl bg-#FFF000 py-16 relative">
           <TitleFrame>

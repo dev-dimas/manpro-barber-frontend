@@ -8,6 +8,7 @@ const colorVariants = cva('frame', {
     color: {
       green: 'bg-#05312A',
       yellow: 'bg-#FFF000',
+      white: 'bg-white',
     },
   },
   defaultVariants: {

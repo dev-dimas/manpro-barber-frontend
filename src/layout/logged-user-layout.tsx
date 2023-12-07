@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
-import { IoReceiptOutline } from 'react-icons/io5';
-import { LuGanttChartSquare, LuLogOut, LuUserCircle } from 'react-icons/lu';
+import { AvatarCircleFillIcon, AvatarCircleIcon, DashboardIcon, LogoutIcon, ReceiptIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import Breadcrumb from '@/components/user/breadcrumb';
 import { cn } from '@/libs/utils';
@@ -19,7 +17,7 @@ export default function LoggedUserLayout({ children }: { children: ReactNode }) 
         <div className="w-2/3 flex gap-3">
           <div className="w-1/3 bg-#05312A shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] rounded-b-[20px]">
             <div className="bg-#FFF000 px-8 py-5 flex rounded-b-[20px] gap-4 items-center">
-              <FaUserCircle size={60} color={'#05312A'} />
+              <AvatarCircleFillIcon className="text-#FFF000 w-[60px] h-[60px]" />
               <div className="text-#05312A font-anton">
                 <p className="text-sm">Hello Boss,</p>
                 <p className="text-xl">John Doe</p>
@@ -33,7 +31,7 @@ export default function LoggedUserLayout({ children }: { children: ReactNode }) 
                   pathname.startsWith('/user/dashboard') && 'bg-#FFF000 text-#05312A'
                 )}
               >
-                <LuGanttChartSquare size={20} />
+                <DashboardIcon className="w-5 h-5" />
                 <span>Dashboard</span>
               </Link>
               <Link
@@ -43,7 +41,7 @@ export default function LoggedUserLayout({ children }: { children: ReactNode }) 
                   pathname.startsWith('/user/transaction') && 'bg-#FFF000 text-#05312A'
                 )}
               >
-                <IoReceiptOutline size={20} />
+                <ReceiptIcon className="w-5 h-5" />
                 <span>Transaction History</span>
               </Link>
               <Link
@@ -53,7 +51,7 @@ export default function LoggedUserLayout({ children }: { children: ReactNode }) 
                   pathname.startsWith('/user/profile') && 'bg-#FFF000 text-#05312A'
                 )}
               >
-                <LuUserCircle size={20} />
+                <AvatarCircleIcon className="w-5 h-5" />
                 <span>Profile</span>
               </Link>
               <Button
@@ -61,7 +59,7 @@ export default function LoggedUserLayout({ children }: { children: ReactNode }) 
                 variant={'ghost'}
                 onClick={() => console.log('Handle onclick logout')}
               >
-                <LuLogOut size={20} />
+                <LogoutIcon className="w-5 h-5" />
                 <span>Logout</span>
               </Button>
             </div>

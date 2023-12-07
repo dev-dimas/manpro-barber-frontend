@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { FaRegCircleUser } from 'react-icons/fa6';
-import { LuClock4 } from 'react-icons/lu';
+import { AvatarCircleIcon, ClockIcon } from '@/components/icons';
 import { UserLayout } from '@/layout';
 import blogPost from '@/pages/blog/blog-post.json';
 
@@ -21,11 +20,11 @@ export default function BlogPost() {
             <Image src={'/images/blog-image-1.png'} alt="Blog Post Image" width={960} height={587} className="w-full rounded-[30px]" />
             <div className="w-full flex justify-end gap-4 text-white mt-7">
               <div className="flex gap-2  items-center">
-                <FaRegCircleUser size={15} />
+                <AvatarCircleIcon className="w-4 h-auto" />
                 <span className="text-sm">Admin</span>
               </div>
               <div className="flex gap-2 items-center">
-                <LuClock4 size={15} />
+                <ClockIcon className="w-4 h-auto" />
                 <span className="text-sm">
                   {post.publishedDate.month} {post.publishedDate.date}
                 </span>

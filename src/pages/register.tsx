@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AvatarSquareIcon, LockIcon, MessageIcon, TelephoneIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { UserLayout } from '@/layout';
@@ -37,7 +38,7 @@ export default function Register() {
                 <h1 className="text-2xl font-extrabold text-#05312A">Create New Account</h1>
                 <form className="mt-9 flex flex-col gap-3 w-full" id="form-register">
                   <div className="relative">
-                    <Image src={'/icons/user-square.svg'} alt="Email icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <AvatarSquareIcon className="w-5 absolute h-[48px] left-[14px] text-#292D32" />
                     <Input
                       placeholder="Name"
                       type="text"
@@ -46,7 +47,7 @@ export default function Register() {
                     />
                   </div>
                   <div className="relative">
-                    <Image src={'/icons/sms.svg'} alt="Email icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <MessageIcon className="w-5 absolute h-[48px] left-[14px] text-#292D32" />
                     <Input
                       placeholder="Email"
                       type="email"
@@ -55,7 +56,7 @@ export default function Register() {
                     />
                   </div>
                   <div className="relative">
-                    <Image src={'/icons/call-calling.svg'} alt="Email icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <TelephoneIcon className="text-#292D32 w-5 h-[48px] absolute left-[14px]" />
                     <Input
                       placeholder="Phone"
                       type="tel"
@@ -64,19 +65,21 @@ export default function Register() {
                     />
                   </div>
                   <div className="relative">
-                    <Image src={'/icons/lock.svg'} alt="Password icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <LockIcon className="w-5 absolute h-[48px] left-[14px] text-#292D32" />
                     <Input
                       placeholder="Password"
                       type="password"
-                      className="h-[48px] bg-[#ececec] pl-10 text-[#2f2f2f] placeholder:text-[#2f2f2f required]"
+                      className="h-[48px] bg-[#ececec] pl-10 text-[#2f2f2f] placeholder:text-[#2f2f2f]"
+                      required
                     />
                   </div>
                   <div className="relative">
-                    <Image src={'/icons/lock.svg'} alt="Password icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <LockIcon className="w-5 absolute h-[48px] left-[14px] text-#292D32" />
                     <Input
                       placeholder="Confirm Password"
                       type=" requiredpassword"
                       className="h-[48px] bg-[#ececec] pl-10 text-[#2f2f2f] placeholder:text-[#2f2f2f]"
+                      required
                     />
                   </div>
                 </form>

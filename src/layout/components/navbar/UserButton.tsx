@@ -1,9 +1,8 @@
 import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { IoReceiptOutline } from 'react-icons/io5';
-import { LuGanttChartSquare, LuLogOut, LuPlus, LuUserCircle } from 'react-icons/lu';
+import { LuPlus } from 'react-icons/lu';
+import { AvatarCircleIcon, DashboardIcon, LogoutIcon, ReceiptIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { cn } from '@/libs/utils';
@@ -14,7 +13,7 @@ export default function UserButton() {
     <DropdownMenu modal={false} open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <DropdownMenuTrigger className="text-white">
         <div className="flex justify-center items-center h-10 gap-2">
-          <Image src={'/icons/profile-circle.svg'} alt="User Action" width={40} height={40} />
+          <AvatarCircleIcon className="w-10 h-auto text-#FFF000" />
           <ChevronDown color="#fff000" className={cn(isOpen && 'rotate-180', 'transition-transform')} />
         </div>
       </DropdownMenuTrigger>
@@ -27,19 +26,19 @@ export default function UserButton() {
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href={'/user/dashboard'} className="flex items-center gap-1">
-            <LuGanttChartSquare size={18} />
+            <DashboardIcon className="w-[18px] h-[18px]" />
             <span>Dashboard</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href={'/user/transaction'} className="flex items-center gap-1">
-            <IoReceiptOutline size={18} />
+            <ReceiptIcon className="w-[18px] h-[18px]" />
             <span>Transaction History</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href={'/user/profile'} className="flex items-center gap-1">
-            <LuUserCircle size={18} />
+            <AvatarCircleIcon className="w-[18px] h-[18px]" />
             <span>Profile</span>
           </Link>
         </DropdownMenuItem>
@@ -49,7 +48,7 @@ export default function UserButton() {
             variant={'ghost'}
             onClick={() => console.log('Handle onclick logout')}
           >
-            <LuLogOut size={18} />
+            <LogoutIcon className="w-[18px] h-[18px]" />
             <span>Logout</span>
           </Button>
         </DropdownMenuItem>

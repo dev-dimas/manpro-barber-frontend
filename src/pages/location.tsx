@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import TitleFrame from '@/components/home/title-frame';
+import { LocationIcon, MapIcon } from '@/components/icons';
 import { UserLayout } from '@/layout';
 
 const Location = () => {
@@ -32,7 +33,7 @@ const Location = () => {
             <div className="w-1/2 font-medium flex flex-col gap-6 text-white">
               <div className="flex flex-col gap-6">
                 <div className="flex gap-2">
-                  <Image src={'/icons/map.svg'} alt="Maps icon" width={20} height={20} />
+                  <MapIcon className="w-5 h-auto text-#FFF000" />
                   <span className="text-#FFF000 text-xl">Address :</span>
                 </div>
                 <p className="text-base">
@@ -42,7 +43,7 @@ const Location = () => {
               </div>
               <div className="flex flex-col gap-6">
                 <div className="flex gap-2">
-                  <Image src={'/icons/telephone.svg'} alt="Telephone icon" width={20} height={20} />
+                  <LocationIcon className="w-5 h-auto text-#FFF000" />
                   <span className="text-#FFF000 text-xl">Contact :</span>
                 </div>
                 <p className="font-normal">Contact Customer Care 0812 - 1963 - 1730</p>

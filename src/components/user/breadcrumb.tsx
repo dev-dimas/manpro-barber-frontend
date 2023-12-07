@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { IoIosArrowForward } from 'react-icons/io';
-import { LuHome } from 'react-icons/lu';
+import { ArrowRightIcon, HomeIcon } from '../icons';
 
 export default function Breadcrumb() {
   const router = useRouter();
@@ -18,11 +17,11 @@ export default function Breadcrumb() {
     <>
       <div className="text-xs flex items-center gap-1">
         <Link href={'/'}>
-          <LuHome />
+          <HomeIcon />
         </Link>
-        <IoIosArrowForward />
+        <ArrowRightIcon />
         <Link href={'/user/dashboard'}>Akun</Link>
-        <IoIosArrowForward />
+        <ArrowRightIcon />
         <Link href={currentRoute?.href || '/'}>{currentRoute?.name}</Link>
       </div>
       <p className="font-anton text-2xl mt-2 pb-3">{currentRoute?.name}</p>

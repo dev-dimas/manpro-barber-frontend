@@ -1,0 +1,14 @@
+export { default as ArrowRightIcon } from './arrow-right.svg';
+export { default as DashboardIcon } from './chart.svg';
+export { default as ClockIcon } from './clock.svg';
+export { default as HomeIcon } from './home.svg';
+export { default as LocationIcon } from './location.svg';
+export { default as LockIcon } from './lock.svg';
+export { default as LogoutIcon } from './logout.svg';
+export { default as MapIcon } from './map.svg';
+export { default as AvatarCircleIcon } from './profile-circle.svg';
+export { default as AvatarCircleFillIcon } from './profile-circle-fill.svg';
+export { default as ReceiptIcon } from './receipt-item.svg';
+export { default as MessageIcon } from './sms.svg';
+export { default as TelephoneIcon } from './telephone.svg';
+export { default as AvatarSquareIcon } from './user-square.svg';

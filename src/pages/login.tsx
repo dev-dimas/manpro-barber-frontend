@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { LockIcon, MessageIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -42,7 +43,7 @@ export default function Login() {
     }
   };
 
-  if (Cookies.get('accessToken')) router.push('/user');
+  if (Cookies.get('accessToken')) router.push('/user/dashboard');
 
   return (
     <>
@@ -75,26 +76,26 @@ export default function Login() {
                 <h1 className="text-2xl font-extrabold text-#05312A">Login to Your Account</h1>
                 <form className="mt-9 flex flex-col gap-3 w-full" id="form-login" onSubmit={handleSubmit(onSubmit)}>
                   <div className="relative">
-                    <Image src={'/icons/sms.svg'} alt="Email icons" height={20} width={20} className="absolute h-[48px] left-[14px] text-red-500" />
+                    <MessageIcon className={cn('w-5 absolute h-[48px] left-[14px] text-#292D32', errors.email && 'text-red-500')} />
                     <Input
                       placeholder="Email"
                       type="email"
                       className={cn(
                         'h-[48px] bg-[#ececec] pl-10 text-[#2f2f2f] placeholder:text-[#2f2f2f] mb-4',
-                        errors.email && 'border-red-500 border-2 focus-visible:ring-offset-0 focus-visible:ring-0 mb-0'
+                        errors.email && 'border-red-500 border-2 focus-visible:ring-offset-0 focus-visible:ring-0 mb-0 placeholder:text-red-500'
                       )}
                       {...register('email')}
                     />
                     {errors.email && <p className="text-red-500 font-semibold text-xs">{errors.email.message}</p>}
                   </div>
                   <div className="relative">
-                    <Image src={'/icons/lock.svg'} alt="Password icons" height={20} width={20} className="absolute h-[48px] left-[14px]" />
+                    <LockIcon className={cn('w-5 absolute h-[48px] left-[14px] text-#292D32', errors.password && 'text-red-500')} />
                     <Input
                       placeholder="Password"
                       type="password"
                       className={cn(
                         'h-[48px] bg-[#ececec] pl-10 text-[#2f2f2f] placeholder:text-[#2f2f2f] mb-4',
-                        errors.password && 'border-red-500 border-2 focus-visible:ring-offset-0 focus-visible:ring-0 mb-0'
+                        errors.password && 'border-red-500 border-2 focus-visible:ring-offset-0 focus-visible:ring-0 mb-0 placeholder:text-red-500'
                       )}
                       {...register('password')}
                     />

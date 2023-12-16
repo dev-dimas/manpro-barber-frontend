@@ -11,6 +11,9 @@ module.exports = {
       },
     },
     extend: {
+      lineClamp: {
+        10: '10',
+      },
       screen: {
         xs: '285px',
       },

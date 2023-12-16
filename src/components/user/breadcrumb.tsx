@@ -20,7 +20,7 @@ export default function Breadcrumb() {
           <HomeIcon />
         </Link>
         <ArrowRightIcon />
-        <Link href={'/user/dashboard'}>Akun</Link>
+        <Link href={'/user/dashboard'}>Account</Link>
         <ArrowRightIcon />
         <Link href={currentRoute?.href || '/'}>{currentRoute?.name}</Link>
       </div>

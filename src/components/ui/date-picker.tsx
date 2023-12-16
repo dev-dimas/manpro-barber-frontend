@@ -10,10 +10,12 @@ export default function DatePicker({
   today,
   date,
   setDate,
+  disablePastDay = false,
 }: {
   today: Date;
   date: Date | undefined;
   setDate: Dispatch<SetStateAction<Date | undefined>>;
+  disablePastDay?: boolean;
 }) {
   return (
     <Popover>
@@ -31,7 +33,7 @@ export default function DatePicker({
             selectedDate?.getTime() !== date?.getTime() && setDate(selectedDate);
           }}
           initialFocus
-          disabled={{ before: today }}
+          disabled={disablePastDay ? { before: today } : false}
           required
           classNames={{
             day_selected: 'bg-#05312A text-white hover:bg-#05312A hover:text-white focus:bg-#05312A focus:text-white',

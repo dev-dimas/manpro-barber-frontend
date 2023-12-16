@@ -19,9 +19,9 @@ interface FetchOptions {
 export class CoreAPI {
   private baseUrl = 'http://localhost:3000';
 
-  setToken = ({ token }: { token: string }) => {
-    jsCookie.set('auth_token', token, {
-      expires: 7,
+  setToken = ({ token, expireable = true }: { token: string; expireable: boolean }) => {
+    jsCookie.set('accessToken', token, {
+      expires: expireable ? 7 : undefined,
       path: '/',
       secure: true,
       sameSite: 'Lax',
@@ -51,7 +51,7 @@ export class CoreAPI {
   private getUrl = (params: object | undefined, path: string, manualUrl: boolean) => {
     const search = params ? encode(params, '?') : '';
 
-    const url = manualUrl ? path : `${this.baseUrl}/api/${path}${search}`;
+    const url = manualUrl ? path : `${this.baseUrl}/api${path}${search}`;
 
     return url;
   };

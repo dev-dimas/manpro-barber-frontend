@@ -13,14 +13,16 @@ const OurStory = () => {
       </div>
       <div className="mt-[68px] flex gap-[102px]">
         <p className="text-white text-base text-justify">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-          centuries,
+          Cutboss Barbershop is the ultimate destination for men who prioritize their appearance and hair health. With over a decade of experience, we
+          have become the trusted center for thousands of customers seeking the latest hair trends and high-quality services. At Cutboss, our
+          experienced barbers not only master the latest men&apos;s hair trends but also understand the uniqueness of each customer. We prioritize
+          customer satisfaction by providing personalized services and using the best-quality products.
         </p>
         <p className="text-white text-base text-justify">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-          centuries,
+          The relaxed and friendly atmosphere inside our barbershop creates an experience that is not just about a haircut but also about relaxation
+          and confidence. We are not just cutting hair; we are creating art that reflects the unique personality of each customer. So, if you&apos;re
+          looking for more than just an ordinary haircut, come to Cutboss Barbershop, where style meets expertise to create an unforgettable haircut
+          experience.
         </p>
       </div>
     </div>

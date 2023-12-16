@@ -9,15 +9,7 @@ export const sideNavbarLink: TSideNavbarLink[] = [
     href: '/cashier',
   },
   {
-    name: 'Booking',
-    href: '/cashier/booking',
-  },
-  {
     name: 'Rekap',
     href: '/cashier/recap',
-  },
-  {
-    name: 'Ubah Layanan',
-    href: '/cashier/change-service',
   },
 ];

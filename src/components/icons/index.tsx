@@ -1,6 +1,8 @@
 export { default as ArrowRightIcon } from './arrow-right.svg';
+export { default as CalendarIcon } from './calendar-add.svg';
 export { default as DashboardIcon } from './chart.svg';
 export { default as ClockIcon } from './clock.svg';
+export { default as GenderIcon } from './gender.svg';
 export { default as HomeIcon } from './home.svg';
 export { default as LocationIcon } from './location.svg';
 export { default as LockIcon } from './lock.svg';
@@ -11,4 +13,5 @@ export { default as AvatarCircleFillIcon } from './profile-circle-fill.svg';
 export { default as ReceiptIcon } from './receipt-item.svg';
 export { default as MessageIcon } from './sms.svg';
 export { default as TelephoneIcon } from './telephone.svg';
+export { default as TicketIcon } from './ticket.svg';
 export { default as AvatarSquareIcon } from './user-square.svg';

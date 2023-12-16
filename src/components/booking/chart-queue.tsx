@@ -1,24 +1,28 @@
 import { ApexOptions } from 'apexcharts';
-import { format } from 'date-fns';
 import dayjs from 'dayjs';
-import moment from 'moment';
 import dynamic from 'next/dynamic';
+import { IEmployeeData } from '@/interfaces';
 import { TAppointment } from './booking-queue';
 
-export default function ChartQueue({ date, appointments }: { date: Date | undefined; appointments: TAppointment[] }) {
+export default function ChartQueue({
+  date,
+  appointments,
+  listEmployee,
+}: {
+  date: Date | undefined;
+  appointments: TAppointment[];
+  listEmployee: IEmployeeData[];
+}) {
   const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-  const barColor = {
-    Denny: '#FF6634',
-    Fathola: '#009865',
-    Helos: '#0265CB',
-  };
-
+  const color = ['#FF6634', '#009865', '#0265CB', '#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF', '#C0C0C0'];
+  let barColor: any = [];
+  listEmployee.map((employee, index) => (barColor[employee.name] = color[index]));
   const chartData: ApexOptions = {
     series: [
       {
         name: 'Appointments',
-        data: appointments.map((appointment) => ({
+        data: appointments?.map((appointment) => ({
           x: appointment.barber,
           y: [dayjs(appointment.start).valueOf(), dayjs(appointment.end).valueOf()],
           fillColor: barColor[appointment.barber as keyof typeof barColor],
@@ -76,5 +80,5 @@ export default function ChartQueue({ date, appointments }: { date: Date | undefi
     },
   };
 
-  return <>{typeof window !== 'undefined' && <Chart type="rangeBar" options={chartData} series={chartData.series} />}</>;
+  return <>{typeof window !== 'undefined' && <Chart type="rangeBar" options={chartData} series={chartData.series} height={300} />}</>;
 }

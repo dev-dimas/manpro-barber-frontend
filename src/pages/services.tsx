@@ -1,14 +1,12 @@
-import Head from 'next/head';
 import Pricelist from '@/components/home/pricelist';
 import ServiceCardList from '@/components/services/service-card-list';
+import TitlePage from '@/components/TitlePage';
 import { UserLayout } from '@/layout';
 
 const Services = () => {
   return (
     <UserLayout>
-      <Head>
-        <title>Services - Barberque</title>
-      </Head>
+      <TitlePage>Services - Barberque</TitlePage>
       {/* Hero Header */}
       <div className="flex flex-col justify-between items-center w-full h-screen bg-[url('/images/hero-image-4.jpg')] bg-cover bg-center bg-no-repeat relative">
         <div className="absolute w-full h-full bottom-0 bg-gradient-to-t from-[#05312a]"></div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-gutter: auto;
+}
+
 html,
 body,
 #__next {
@@ -16,6 +20,37 @@ main {
 
 body {
   background-color: #05312a;
+}
+
+.react-datepicker__navigation--years::before {
+  border-color: #666;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  content: '';
+  display: block;
+  height: 9px;
+  left: 11px;
+  position: absolute;
+  width: 9px;
+}
+
+.react-datepicker__navigation--years-upcoming::before {
+  top: 17px;
+  transform: rotate(315deg);
+}
+
+.react-datepicker__navigation--years-previous::before {
+  top: 6px;
+  transform: rotate(135deg);
+}
+
+.react-datepicker__day--today {
+  background-color: transparent;
+  font-weight: 400;
+}
+
+.react-datepicker__day--selected {
+  background-color: #216ba5;
 }
 
 @layer base {

@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { AvatarCircleIcon, AvatarSquareIcon, ClockIcon, LocationIcon, MessageIcon, TelephoneIcon } from '../icons';
+import { ClockIcon, LocationIcon, TelephoneIcon } from '../icons';
 
 const HeroInfo = () => {
   return (
@@ -24,7 +23,6 @@ const HeroInfo = () => {
           <p className="text-white text-sm">Buka Setiap Hari</p>
           <p className="text-white text-xl font-bold">10.00 - 21.00</p>
         </div>
-        <MessageIcon className="text-red-500" />
       </div>
     </>
   );

@@ -33,7 +33,6 @@ export default function ForgotPassword() {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
   } = useForm<ForgotPasswordValidationSchema>({
     resolver: zodResolver(forgotPasswordSchema),
   });

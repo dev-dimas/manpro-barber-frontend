@@ -1,5 +1,6 @@
 import jsCookie from 'js-cookie';
 import { encode } from 'qss';
+import { UniversalType } from '@/@types';
 import { getClientSideCookie } from '@/libs/auth';
 
 interface FetchOptions {

@@ -76,7 +76,9 @@ export default function Dashboard() {
                 <>
                   <div className="w-1/2 flex">
                     <p className="w-1/2">{dashboardData.booking.name}</p>
-                    <p className="w-1/2">{dayjs(dashboardData.booking.date).format('DD-MM-YYYY HH:mm')}</p>
+                    <p className="w-1/2">
+                      {dayjs(dashboardData.booking.date).hour(dashboardData.booking.startTime.slice(1, 2)).format('DD-MM-YYYY HH:mm')}
+                    </p>
                   </div>
                   <p className="w-1/2">{dashboardData.serviceName}</p>
                 </>

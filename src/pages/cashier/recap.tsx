@@ -22,7 +22,7 @@ const Recap = () => {
   const today = new Date();
   const [date, setDate] = useState<Date | undefined>(today);
   const [recapData, setRecapData] = useState<TRecapData>();
-  const { mutate: getDataRecap, isLoading } = useGetDataRecap();
+  const { mutate: getDataRecap } = useGetDataRecap();
 
   useEffect(() => {
     getDataRecap(

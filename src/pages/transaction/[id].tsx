@@ -11,7 +11,7 @@ import TitlePage from '@/components/TitlePage';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useGetBookingById } from '@/hooks/query';
-import { anton, montserrat, ooohBaby } from '@/libs/font';
+import { anton, montserrat } from '@/libs/font';
 import { cn } from '@/libs/utils';
 
 export default function Id() {
@@ -34,7 +34,7 @@ export default function Id() {
 
   const handleCopyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(booking.data[0].id);
+      await navigator.clipboard.writeText(booking.data.id);
       toast.success('Transaction id copied!');
     } catch {
       toast.error('Failed to copy transaction id. Try again later!');
@@ -66,7 +66,7 @@ export default function Id() {
               </div>
               <Separator className="h-[1px] bg-[rgba(0,_0,_0_,0.50)] my-2" />
               <p className="text-black text-xs pb-5">
-                {booking.data[0].status === 'booking'
+                {booking.data.status === 'booking'
                   ? 'We have received your order. You can come to our Barbershop 10 minutes before the schedule stated on the ticket.'
                   : 'Thank you for your order. We look forward to welcoming you again soon!.'}
               </p>
@@ -91,7 +91,7 @@ export default function Id() {
                 <div className="w-full flex justify-between text-black text-xs">
                   <p>Id Transaction</p>
                   <div className="flex gap-4">
-                    <p>{booking.data[0].id}</p>
+                    <p>{booking.data.id}</p>
                     <Button
                       className="text-xs px-2 py-0 h-4 bg-transparent text-[#b3b3b3] rounded-[5px] border border-[#b3b3b3] font-semibold"
                       onClick={handleCopyToClipboard}
@@ -103,15 +103,15 @@ export default function Id() {
                 </div>
                 <div className="w-full flex justify-between text-black text-xs">
                   <p>Services</p>
-                  <p>{booking.data[0].serviceName}</p>
+                  <p>{booking.data.serviceName}</p>
                 </div>
                 <div className="w-full flex justify-between text-black text-xs">
                   <p>Cost</p>
-                  <p>Rp{booking.data[0].price.toLocaleString('id')}</p>
+                  <p>Rp{booking.data.price.toLocaleString('id')}</p>
                 </div>
                 <div className="w-full flex justify-between text-black text-xs">
                   <p>Time</p>
-                  <p>{dayjs(`${booking.data[0].date.slice(0, 10)} ${booking.data[0].startTime}`).format('dddd, DD-MM-YYYY HH:mm')}</p>
+                  <p>{dayjs(`${booking.data.date} ${booking.data.starttime.slice(0, 5)}`).format('dddd, DD-MM-YYYY HH:mm')}</p>
                 </div>
               </div>
 

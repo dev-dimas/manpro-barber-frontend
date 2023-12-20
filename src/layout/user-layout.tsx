@@ -1,8 +1,7 @@
-import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode';
 import { useRouter } from 'next/router';
 import { ReactNode, useEffect, useMemo } from 'react';
-import { useGetUser, useGetUserDashboard } from '@/hooks/query';
+import { useGetUser } from '@/hooks/query';
 import useUser from '@/hooks/store/useUser';
 import { getClientSideCookie } from '@/libs/auth';
 import { anton, bebasNeue, montserrat, ooohBaby } from '@/libs/font';

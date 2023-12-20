@@ -44,13 +44,7 @@ const BookingForm = ({ withVShape = false }: { withVShape?: boolean }) => {
   });
   type BookingValidationSchema = z.infer<typeof bookingSchema>;
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setValue,
-    control,
-  } = useForm<BookingValidationSchema>({
+  const { register, handleSubmit, setValue, control } = useForm<BookingValidationSchema>({
     resolver: zodResolver(bookingSchema),
   });
 
@@ -72,7 +66,7 @@ const BookingForm = ({ withVShape = false }: { withVShape?: boolean }) => {
         tokenPayment = res.data?.payment?.token;
 
         (window as any).snap.pay(tokenPayment, {
-          onSuccess: (result: any) => {
+          onSuccess: () => {
             createBooking(res.data.booking_details, {
               onSuccess: (res) => {
                 if (res.statusCode === 201) {
@@ -87,7 +81,7 @@ const BookingForm = ({ withVShape = false }: { withVShape?: boolean }) => {
                   toast.error('Booking failed. Already full booked!');
                 }
               },
-              onError: (error: any) => {
+              onError: () => {
                 toast.error('Something went wrong. Try again later');
               },
             });

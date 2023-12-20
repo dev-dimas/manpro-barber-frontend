@@ -21,7 +21,7 @@ const HeroInfo = () => {
         <ClockIcon className="text-#FFF000 w-[30px] h-auto" />
         <div className="flex flex-col">
           <p className="text-white text-sm">Buka Setiap Hari</p>
-          <p className="text-white text-xl font-bold">10.00 - 21.00</p>
+          <p className="text-white text-xl font-bold">08.00 - 16.00</p>
         </div>
       </div>
     </>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Cookies from 'js-cookie';
 import { create } from 'zustand';
 import { IUserData } from '@/interfaces';

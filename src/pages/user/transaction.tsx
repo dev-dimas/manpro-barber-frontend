@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import dayjs from 'dayjs';
 import Cookies from 'js-cookie';
 import TitlePage from '@/components/TitlePage';

@@ -3,7 +3,7 @@
   "plugins": ["simple-import-sort"],
   "rules": {
     "import/no-anonymous-default-export": "off",
-    // "no-unused-vars": "warn",
+    "no-unused-vars": "warn",
     "simple-import-sort/imports": [
       "warn",
       {

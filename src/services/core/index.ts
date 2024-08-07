@@ -24,7 +24,7 @@ export class CoreAPI {
     jsCookie.set('accessToken', token, {
       expires: expireable ? 7 : undefined,
       path: '/',
-      secure: true,
+      secure: false, // set to true if youre using HTTPS
       sameSite: 'Lax',
     });
   };

@@ -13,7 +13,7 @@ class EmployeeApi extends CoreAPI {
 
   async loginEmployee(json: { email: string; password: string; remember: boolean }) {
     const res = await this.fetch('/login/employee', 'POST', { json: { ...json } });
-    if (res.data.accessToken) await this.setToken({ token: res.data.accessToken, expireable: json.remember });
+    if (res.data.accessToken) this.setToken({ token: res.data.accessToken, expireable: json.remember });
     return res;
   }
 }

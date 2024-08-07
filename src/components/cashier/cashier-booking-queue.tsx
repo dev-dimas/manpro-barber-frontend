@@ -22,7 +22,6 @@ export default function CashierBookingQueue() {
       { date: dayjs(date).format('YYYY-MM-DD') },
       {
         onSuccess: (res) => {
-          console.log(res);
           if (res?.data?.length) {
             const queue = res?.data?.map((data: TAppointment) => ({
               barber: data.barber,

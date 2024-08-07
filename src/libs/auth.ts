@@ -2,6 +2,6 @@ import jsCookie from 'js-cookie';
 
 export const getClientSideCookie = () => {
   return {
-    token: jsCookie.get('access_token'),
+    token: jsCookie.get('accessToken'),
   };
 };

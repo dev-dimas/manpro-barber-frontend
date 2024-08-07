@@ -1,5 +1,6 @@
 import jsCookie from 'js-cookie';
 import { encode } from 'qss';
+import { UniversalType } from '@/@types';
 import { getClientSideCookie } from '@/libs/auth';
 
 interface FetchOptions {
@@ -19,11 +20,11 @@ interface FetchOptions {
 export class CoreAPI {
   private baseUrl = 'http://localhost:3000';
 
-  setToken = ({ token }: { token: string }) => {
-    jsCookie.set('auth_token', token, {
-      expires: 7,
+  setToken = ({ token, expireable = true }: { token: string; expireable: boolean }) => {
+    jsCookie.set('accessToken', token, {
+      expires: expireable ? 7 : undefined,
       path: '/',
-      secure: true,
+      secure: false, // set to true if youre using HTTPS
       sameSite: 'Lax',
     });
   };
@@ -51,7 +52,7 @@ export class CoreAPI {
   private getUrl = (params: object | undefined, path: string, manualUrl: boolean) => {
     const search = params ? encode(params, '?') : '';
 
-    const url = manualUrl ? path : `${this.baseUrl}/api/${path}${search}`;
+    const url = manualUrl ? path : `${this.baseUrl}/api${path}${search}`;
 
     return url;
   };

@@ -49,7 +49,7 @@ export default function UserButton() {
       <DropdownMenuTrigger className="text-white">
         <div className="flex justify-center items-center h-10 gap-2">
           <Avatar className="h-auto w-10">
-            {user?.avatar && <Image src={user?.avatar as string} alt="User Avatar" height={500} width={500} />}
+            {user?.avatar && <Image src={user?.avatar as string} alt="User Avatar" height={500} width={500} className="aspect-square" />}
             {!user?.avatar && (
               <AvatarFallback className="bg-transparent">
                 <AvatarCircleIcon className="w-full h-full text-#FFF000" />

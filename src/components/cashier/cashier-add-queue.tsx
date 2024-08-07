@@ -125,38 +125,39 @@ export default function CashierAddQueue() {
               placeholderText="Input date and time"
               showTimeSelect
               selected={bookingDate}
-              onChange={(date) => {
-                const currentHour = dayjs().hour();
-                const currentMinute = dayjs().minute();
-                const selectedDate = dayjs(date);
-                const selectedHour = selectedDate.hour();
-                const tomorrow = dayjs().add(1, 'day');
+              // onChange={(date) => {
+              //   const currentHour = dayjs().hour();
+              //   const currentMinute = dayjs().minute();
+              //   const selectedDate = dayjs(date);
+              //   const selectedHour = selectedDate.hour();
+              //   const tomorrow = dayjs().add(1, 'day');
 
-                if (selectedDate.isSame(dayjs(), 'day')) {
-                  if (currentHour < 8) {
-                    return setBookingDate(selectedHour < 8 ? selectedDate.hour(8).minute(0).toDate() : selectedDate.toDate());
-                  } else if (currentHour >= 8 && currentHour <= 15) {
-                    if (currentMinute < 10) {
-                      return setBookingDate(selectedDate.hour(selectedHour).minute(0).toDate());
-                    } else if (currentMinute < 40) {
-                      return setBookingDate(selectedDate.hour(selectedHour).minute(30).toDate());
-                    } else {
-                      return setBookingDate(selectedDate.hour(selectedDate.add(1, 'hour').hour()).minute(0).toDate());
-                    }
-                  } else if (currentHour > 15) {
-                    if (selectedDate.add(1, 'day').isSame(tomorrow, 'date')) {
-                      return setBookingDate(selectedDate.add(1, 'day').hour(8).minute(0).toDate());
-                    } else {
-                      return setBookingDate(selectedDate.hour(8).minute(0).toDate());
-                    }
-                  }
-                } else {
-                  if (selectedDate.hour() < 8 || selectedDate.hour() > 15) {
-                    return setBookingDate(selectedDate.hour(8).minute(0).toDate());
-                  }
-                  return setBookingDate(selectedDate.toDate());
-                }
-              }}
+              //   if (selectedDate.isSame(dayjs(), 'day')) {
+              //     if (currentHour < 8) {
+              //       return setBookingDate(selectedHour < 8 ? selectedDate.hour(8).minute(0).toDate() : selectedDate.toDate());
+              //     } else if (currentHour >= 8 && currentHour <= 15) {
+              //       if (currentMinute < 10) {
+              //         return setBookingDate(selectedDate.hour(selectedHour).minute(0).toDate());
+              //       } else if (currentMinute < 40) {
+              //         return setBookingDate(selectedDate.hour(selectedHour).minute(30).toDate());
+              //       } else {
+              //         return setBookingDate(selectedDate.hour(selectedDate.add(1, 'hour').hour()).minute(0).toDate());
+              //       }
+              //     } else if (currentHour > 15) {
+              //       if (selectedDate.add(1, 'day').isSame(tomorrow, 'date')) {
+              //         return setBookingDate(selectedDate.add(1, 'day').hour(8).minute(0).toDate());
+              //       } else {
+              //         return setBookingDate(selectedDate.hour(8).minute(0).toDate());
+              //       }
+              //     }
+              //   } else {
+              //     if (selectedDate.hour() < 8 || selectedDate.hour() > 15) {
+              //       return setBookingDate(selectedDate.hour(8).minute(0).toDate());
+              //     }
+              //     return setBookingDate(selectedDate.toDate());
+              //   }
+              // }}
+              onChange={(date) => setBookingDate(date as Date)}
               minDate={minDateBooking}
               dateFormat="d MMMM yyyy, HH:mm"
               timeFormat="HH:mm"

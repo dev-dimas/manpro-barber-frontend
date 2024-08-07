@@ -1,18 +1,16 @@
-import Head from 'next/head';
 import BookingForm from '@/components/home/booking-form';
 import HeroInfo from '@/components/home/hero-info';
 import OurBarber from '@/components/home/our-barber';
 import OurServices from '@/components/home/our-services';
 import OurStory from '@/components/home/our-story';
 import Pricelist from '@/components/home/pricelist';
+import TitlePage from '@/components/TitlePage';
 import { UserLayout } from '@/layout';
 
 export default function Home() {
   return (
     <UserLayout>
-      <Head>
-        <title>Barberque</title>
-      </Head>
+      <TitlePage>Barberque</TitlePage>
 
       {/* Hero Header */}
       <div className="flex flex-col justify-between items-center w-full h-screen bg-[url('/images/hero-image-1.jpg')] bg-cover bg-center bg-no-repeat bg-[rgba(5,49,42,0.50)] bg-blend-overlay">
@@ -36,7 +34,7 @@ export default function Home() {
         {/* Our Services */}
         <OurServices />
         {/* Booking Now */}
-        <BookingForm />
+        <BookingForm withVShape />
         {/* OurBarber */}
         <OurBarber />
         {/* Pricelist */}

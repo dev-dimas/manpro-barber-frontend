@@ -1,17 +1,20 @@
-import Head from 'next/head';
+import CashierAddQueue from '@/components/cashier/cashier-add-queue';
+import CashierBookingQueue from '@/components/cashier/cashier-booking-queue';
+import CashierConfirmBooking from '@/components/cashier/cashier-confirm-booking';
+import TitlePage from '@/components/TitlePage';
 import { CashierLayout } from '@/layout';
 
 const Cashier = () => {
   return (
-    <>
-      <Head>
-        <title>Dashboard - Cutboss Barbershop</title>
-      </Head>
+    <CashierLayout>
+      <TitlePage>Dashboard - Cutboss Barbershop</TitlePage>
 
-      <CashierLayout>
-        <h1>Cashier Dashboard Page</h1>
-      </CashierLayout>
-    </>
+      <CashierBookingQueue />
+
+      <CashierAddQueue />
+
+      <CashierConfirmBooking />
+    </CashierLayout>
   );
 };
 

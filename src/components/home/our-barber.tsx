@@ -9,13 +9,14 @@ const OurBarber = () => {
           <h2 className="uppercase font-anton text-5xl py-2 text-#ECF4F3">Our Barber</h2>
         </TitleFrame>
         <p className="text-base text-center text-white max-w-[543px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Trust your hair to our expert barbers for a personalized <br />
+          and top-notch experience!
         </p>
         {/* Profile Picture */}
         <div className="flex gap-4 pt-5">
-          <EmployeeCard imgSrc="/images/employee-1.jpg" name="Denny" description="Capster" />
-          <EmployeeCard imgSrc="/images/employee-2.jpg" name="Fathola" description="Capster" className="bg-#FFF000" />
-          <EmployeeCard imgSrc="/images/employee-3.jpg" name="Helos" description="Capster" />
+          <EmployeeCard imgSrc="/images/employee-1.jpg" name="Denny" description="Barberman" />
+          <EmployeeCard imgSrc="/images/employee-2.jpg" name="Fathola" description="Barberman" className="bg-#FFF000" />
+          <EmployeeCard imgSrc="/images/employee-3.jpg" name="Helos" description="Barberman" />
         </div>
       </div>
     </div>

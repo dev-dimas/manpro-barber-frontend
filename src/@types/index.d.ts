@@ -1,1 +1,1 @@
-type UniversalType<T = any> = T;
+export type UniversalType<T = any> = T;

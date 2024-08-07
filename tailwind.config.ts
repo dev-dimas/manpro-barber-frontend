@@ -11,6 +11,9 @@ module.exports = {
       },
     },
     extend: {
+      lineClamp: {
+        10: '10',
+      },
       screen: {
         xs: '285px',
       },
@@ -23,6 +26,7 @@ module.exports = {
       colors: {
         '#1D1D1D': '#1D1D1D',
         '#20201E': '#20201E',
+        '#292D32': '#292D32',
         '#DDB361': '#DDB361',
         '#D8A94C': '#D8A94C',
         '#C6922B': '#C6922B',
